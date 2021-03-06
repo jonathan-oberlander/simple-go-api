@@ -1,0 +1,27 @@
+### get the list of coasters
+GET http://localhost:8080/coaster
+
+### enter as admin
+GET http://localhost:8080/admin
+Authorization: Basic admin:secret
+
+
+### get a single coaster by ID
+GET http://localhost:8080/coaster/1609349502625508000
+
+### get a random coaster
+GET http://localhost:8080/coaster/random
+
+### add a coster to the list - IDs are automatically generated
+POST http://localhost:8080/coaster
+Content-Type: application/json
+
+{
+    "name": "Taron",
+    "manufacturer": "Intamin",
+    "inPark": "PhantasiaLand",
+    "height": 32
+}
+
+### method doesnt exist yet
+PUT http://localhost:8080/coaster
